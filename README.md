@@ -1,5 +1,9 @@
 # PoE2 Discord Trade Notification Extension
  
+<img src="https://raw.githubusercontent.com/LorenzoDv/poe2-trade-discord-notification/master/img/1.PNG" width = "300"> <br/><br/>
+<img src="https://raw.githubusercontent.com/LorenzoDv/poe2-trade-discord-notification/master/img/4.PNG" width = "300"> <br/><br/>
+<img src="https://raw.githubusercontent.com/LorenzoDvpoe2-trade-discord-notification/master/img/5.PNG" width = "300"> <br/><br/>
+
 ## A Quick Guide
 
 Download the file, unzip it, go to the section in your browser where you manage your extensions, and you can manually add a new extension! Watch a tutorial on how to install an extension manually, it's very easy.
