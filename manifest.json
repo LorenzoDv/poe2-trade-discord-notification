@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "POE2 - Trade notification Discord",
+    "version": "1.2",
+    "description":  "Adds a 'Send to Discord' button to the POE2 Trade page.",
+    "content_scripts": [
+      {
+        "matches": ["https://fr.pathofexile.com/trade2/search/**", "https://www.pathofexile.com/trade2/search/**", "https://br.pathofexile.com/trade2/search/**", "https://ru.pathofexile.com/trade2/search/**", "https://th.pathofexile.com/trade2/search/**", "https://de.pathofexile.com/trade2/search/**", "https://es.pathofexile.com/trade2/search/**", "https://jp.pathofexile.com/trade2/search/**"],
+        "js": ["script.js"]
+      }
+    ],
+    "icons": {
+      "128": "icon.png"
+    },
+    "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage"]
+}
+  
