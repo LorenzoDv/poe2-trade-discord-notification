@@ -18,6 +18,7 @@ Simplify item sharing on Discord directly from the Path of Exile 2 trade site wi
 Direct Send to Discord: Easily share items with your Discord server with a single click.
 
 Quick Webhook Setup: Create a webhook in just a few simple steps:
+
 Go to your Discord server Settings.
 Select Application -> Integrations -> Webhooks.
 Create a webhook and copy the URL into the extension.
