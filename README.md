@@ -2,7 +2,7 @@
  
 <img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/1.png" width = "300"> <br/><br/>
 <img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/4.png" width = "300"> <br/><br/>
-<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/5.png" width = "300"> <br/><br/>
+<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/5.PNG" width = "300"> <br/><br/>
 
 ## A Quick Guide
 
