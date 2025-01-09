@@ -3,6 +3,7 @@
 ## Overview
 Adds a 'Send to Discord' button to the POE2 Trade page.
 
+Video tutorial <a href="https://www.youtube.com/watch?v=rHpdKz_KHyw">Youtube Link</a>
 
 Simplify item sharing on Discord directly from the Path of Exile 2 trade site with the "Send to Discord" extension. This extension adds a convenient button to instantly send items to a Discord server, making communication and collaboration within your community seamless.
  
@@ -19,7 +20,7 @@ Or download it from the store: <a href="https://chromewebstore.google.com/detail
 ## Key Features:
 Direct Send to Discord: Easily share items with your Discord server with a single click.
 
-Video tutorial <a href="https://www.youtube.com/watch?v=rHpdKz_KHyw">Youtube Link</a>
+
 
 Quick Webhook Setup: Create a webhook in just a few simple steps:
 
