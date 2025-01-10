@@ -114,14 +114,10 @@ function sendToDiscord(itemData) {
     const webhookUrl = data.webhookUrl;
     const roleId = data.roleId;
     if (!webhookUrl) {
-      alert('Veuillez configurer le Webhook URL dans l’extension.');
+      alert("Please configure the Webhook URL in the extension. If needed, watch the tutorial video in the extension's popup.");
       return;
     }
 
-    if (!roleId) {
-      alert('Veuillez configurer l\'ID du rôle dans l’extension.');
-      return;
-    }
     const currentUrl = window.location.href;
     const embed = {
       description: `
@@ -142,7 +138,7 @@ function sendToDiscord(itemData) {
         url: itemData.iconUrl,
       },
       footer: {
-        text: 'PoE2 Discord notification',
+        text: 'POE2 Discord notification',
       },
     };
 
@@ -191,6 +187,12 @@ setTimeout(() => {
           button.style.fontSize = '12px';
           button.textContent = "Send to discord";
           
+
+          const p = document.createElement('p');
+          p.textContent = "Message send !";
+          p.style.marginLeft = '10px';
+          p.style.color = '#309630';
+
           const rightDiv = itemBoxContent.closest('.row').querySelector('.right');
           if (rightDiv) {
             rightDiv.appendChild(button);
@@ -199,6 +201,9 @@ setTimeout(() => {
           button.addEventListener("click", () => {
             const itemData = extractItemData(itemBoxContent);
             sendToDiscord(itemData);
+            if (rightDiv) {
+              rightDiv.appendChild(p);
+            }
           });
         });
       });
@@ -223,6 +228,11 @@ function checkAndAddButton() {
       button.style.fontSize = '12px';
       button.textContent = "Send to discord";
 
+      const p = document.createElement('p');
+      p.textContent = "Message send !";
+      p.style.marginLeft = '10px';
+      p.style.color = '#309630';
+      
       const rightDiv = itemBoxContent.closest('.row').querySelector('.right');
       if (rightDiv) {
         rightDiv.appendChild(button);
@@ -233,6 +243,9 @@ function checkAndAddButton() {
         const itemDataBox = itemBoxContent.closest('.row').querySelector('.middle .itemBoxContent');
         const itemData = extractItemData(itemDataBox);
         sendToDiscord(itemData);
+        if (rightDiv) {
+          rightDiv.appendChild(p);
+        }
       });
     }
   });
