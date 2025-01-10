@@ -1,4 +1,4 @@
-﻿﻿# PoE2 brower extension for sharing item to discord
+﻿## PoE2 chrome extension for sharing item to discord
 
 ## Overview
 Adds a 'Send to Discord' button to the POE2 Trade page.
