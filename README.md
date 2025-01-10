@@ -1,4 +1,4 @@
-﻿# PoE2 brower extension for sharing item to discord
+﻿﻿# PoE2 brower extension for sharing item to discord
 
 ## Overview
 Adds a 'Send to Discord' button to the POE2 Trade page.
@@ -7,13 +7,17 @@ Video tutorial <a href="https://www.youtube.com/watch?v=rHpdKz_KHyw">Youtube Lin
 
 Simplify item sharing on Discord directly from the Path of Exile 2 trade site with the "Send to Discord" extension. This extension adds a convenient button to instantly send items to a Discord server, making communication and collaboration within your community seamless.
  
-<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/1.png" width = "300"> <br/><br/>
-<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/4.png" width = "300"> <br/><br/>
-<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/5.PNG" width = "300"> <br/><br/>
+<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/6.png"> <br/><br/>
+
 
 ## A Quick Guide
 
-Download the file, unzip it, go to the section in your browser where you manage your extensions, and you can manually add a new extension! Watch a tutorial on how to install an extension manually, it's very easy.
+<img src="https://github.com/LorenzoDv/poe2-trade-discord-notification/blob/main/img/7.png"> <br/><br/>
+Download the ZIP from the repository and extract it (click the green Code button in the top right corner)
+Open Chrome and go to chrome://extensions
+Click "Load unpacked"
+Select the folder you extracted
+
 Or download it from the store: <a href="https://chromewebstore.google.com/detail/poe2-trade-notification-d/nhoepgdimjnhkmcboffifdgofjaliill?hl=en&utm_source=ext_sidebar">Extension store</a>
 
 
