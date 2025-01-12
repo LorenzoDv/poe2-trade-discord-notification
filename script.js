@@ -121,7 +121,7 @@ function sendToDiscord(itemData) {
     const currentUrl = window.location.href;
     const embed = {
       description: `
-        :loudspeaker: **Ping for POE 2 Role:** <@&${roleId}>\n
+        :loudspeaker: **A new item has just been shared:** ${roleId ? ` <@&${roleId}>` : ''}\n
          **Type:** ${itemData.type}\n
         **Item Level:** ${itemData.itemLevel}\n
         **Requirements:** ${itemData.requirements.join(' | ')}\n

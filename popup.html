@@ -113,6 +113,49 @@
       align-items: center;
     }
 
+    .help-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #ccc;
+            color: white;
+            font-size: 12px;
+            line-height: 16px;
+            cursor: pointer;
+            margin-left: 5px;
+            position: relative;
+        }
+
+        .help-icon:hover::after {
+            content: attr(data-help);
+            position: absolute;
+            top: 20px;
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 10;
+            width: 200px;
+        }
+        .github{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .github:hover img{
+          background-color: white;
+          border-radius: 100%;
+          transition: 0.2s all linear;
+        }
+        .github img{
+          width: 30px;
+          height: 30px;
+          transition: 0.2s all linear;
+        }
   </style>
 </head>
 <body>
@@ -122,13 +165,16 @@
       <a class="trade2-website" target="_blank" href="https://youtu.be/rHpdKz_KHyw?si=XNWsI-nC2ySAyNVK">Tutorial video</a>
     </div>
     <h2>Configure Notifications</h2>
-    <label for="webhookUrl">Webhook URL:</label>
+    <label for="webhookUrl">Webhook URL:  <span class="help-icon" data-help="Enter the URL for your webhook integration.">?</span></label>
     <input type="text" id="webhookUrl" placeholder="Enter your webhook URL..." />
-    <label for="roleId">Discord Role ID:</label>
+   
+    <label for="roleId">Discord Role ID (optional): <span class="help-icon" data-help="Add the Role ID if you want to ping a role when sending a message on Discord">?</span></label>
     <input type="text" id="roleId" placeholder="Enter the role ID..." />
+    
     <button id="save">Save</button>
     <p id="status"></p>
     <p class="dev-by">Developed by Shinry</p>
+    <a class="github" href="https://github.com/LorenzoDv/poe2-trade-discord-notification" target="_blank"><img src="assets/img/github.png" alt="github of the project"></a>
     <p class="disclaimer">This tool was developed by a community member and is not affiliated with Grinding Gear Games.</p>
 
   </div>
