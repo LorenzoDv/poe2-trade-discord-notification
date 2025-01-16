@@ -47,10 +47,18 @@ function extractItemData(itemBoxContent) {
 
   const explicitMods = [];
   itemBoxContent.querySelectorAll(".explicitMod").forEach((mod) => {
-    const modData = {
-      label: mod.querySelector(".lc.s")?.textContent.trim(),
-      value: mod.querySelector(".lc.r .d")?.textContent.trim(),
-    };
+    let modData = {};
+
+    const simpleMod = mod.querySelector(".lc");
+    if (simpleMod && !mod.querySelector(".lc.s")) {
+      modData.label = simpleMod.textContent.trim();
+      modData.value = "";
+    } else {
+      modData = {
+        label: mod.querySelector(".lc.s")?.textContent.trim() || "",
+      };
+    }
+
     explicitMods.push(modData);
   });
   data.explicitMods = explicitMods;
@@ -58,6 +66,11 @@ function extractItemData(itemBoxContent) {
   const itemLevel = itemBoxContent.querySelector(".itemLevel span.lc.s");
   if (itemLevel) {
     data.itemLevel = itemLevel.textContent.trim();
+  }
+
+  const enchant = itemBoxContent.querySelector(".enchantMod span.lc.s");
+  if (enchant) {
+    data.enchant = enchant.textContent.trim();
   }
 
   const requirements = [];
@@ -121,19 +134,24 @@ function sendToDiscord(itemData) {
     const currentUrl = window.location.href;
     const embed = {
       description: `
-        :loudspeaker: **A new item has just been shared:** ${roleId ? ` <@&${roleId}>` : ''}\n
-         **Type:** ${itemData.type}\n
-        **Item Level:** ${itemData.itemLevel}\n
-        **Requirements:** ${itemData.requirements.join(' | ')}\n
+        :loudspeaker: **A new item has just been shared:** ${roleId ? ` <@&${roleId}>` : ''}
+        **Type:** ${itemData.type}
+        **Item Level:** ${itemData.itemLevel}
+        **Requirements:** ${itemData.requirements.join(' | ')}
+        **-----------------------------**
         **Properties:**
         ${itemData.properties.map(prop => `- ${prop.value}`).join('\n')}
-        ${itemData.runeMod ? `\n**Rune:**\n${itemData.runeMod}` : ''}
-        ${itemData.implicitMods && itemData.implicitMods.length > 0 ? `\n**Implicit Mods:**\n${itemData.implicitMods.map(mod => `- ${mod.label}: ${mod.value}`).join('\n')}` : ''}\n
-        \n**Explicit Mods:**\n${itemData.explicitMods.map(mod => `- ${mod.label}: ${mod.value}`).join('\n')}
-        ${itemData.corrupted ? `\n\n**${itemData.corrupted}**` : ''}\n
-        **${itemData.price}**\n
-        \n**Filter URL:** ${currentUrl}
-      `,
+        ${itemData.runeMod ? `\n**-----------------------------**\n**Rune:**\n${itemData.runeMod}` : ''}
+        ${itemData.enchant ? `\n**-----------------------------**\n**Enchant:**\n- ${itemData.enchant}` : ''}
+        ${itemData.implicitMods && itemData.implicitMods.length > 0 ? `\n**-----------------------------**\n**Implicit Mods:**\n${itemData.implicitMods.map(mod => `- ${mod.label}: ${mod.value}`).join('\n')}` : ''}
+        **-----------------------------**
+        **Explicit Mods:**\n${itemData.explicitMods.map(mod => `- ${mod.label}`).join('\n')}
+        ${itemData.corrupted ? `\n**-----------------------------**\n** 🔴 ${itemData.corrupted}**` : ''}
+        **-----------------------------**
+        **${itemData.price}**
+        **-----------------------------**
+        **Filter URL:** ${currentUrl}
+      `.replace(/^\s+|\s+$/gm, ''),
       image: {
         url: itemData.iconUrl,
       },
