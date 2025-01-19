@@ -156,6 +156,15 @@
           height: 30px;
           transition: 0.2s all linear;
         }
+        #paypal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        #paypal a {
+            margin: 5px !important;
+        }
   </style>
 </head>
 <body>
@@ -175,8 +184,10 @@
     <p id="status"></p>
     <p class="dev-by">Developed by Shinry</p>
     <a class="github" href="https://github.com/LorenzoDv/poe2-trade-discord-notification" target="_blank"><img src="assets/img/github.png" alt="github of the project"></a>
+    <div id="paypal">
+      <a class="trade2-website"  target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=E4S8B6PBMLSNG">Donate with Paypal</a>
+    </div>
     <p class="disclaimer">This tool was developed by a community member and is not affiliated with Grinding Gear Games.</p>
-
   </div>
   <script src="popup.js"></script>
 </body>

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "POE2 - Trade notification Discord",
-    "version": "1.6",
+    "version": "1.7",
     "description":  "Adds a 'Send to Discord' button to the POE2 Trade page for sharing items with your friends on a Discord server.",
     "content_scripts": [
       {
